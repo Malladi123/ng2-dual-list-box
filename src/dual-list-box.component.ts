@@ -1,3 +1,4 @@
+import { ArrayFilterPipe } from './array.pipes';
 import { Component, Input, Output, EventEmitter, OnInit, forwardRef } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
@@ -52,9 +53,9 @@ export class DualListBoxComponent implements OnInit, ControlValueAccessor {
      // text displayed over the selected items list box
      @Input() selectedText = 'Selected items';
     // set placeholder text in available items list box
-    @Input() availableFilterPlaceholder= 'Search Pharmacies';
+    @Input() availableFilterPlaceholder= 'Filter ...';
     // set placeholder text in selected items list box
-    @Input() selectedFilterPlaceholder = 'Assigned Pharmacies';
+    @Input() selectedFilterPlaceholder = 'Filter ...';
 
     // event called when item or items from available items(left box) is selected
     @Output() onAvailableItemSelected: EventEmitter<{} | Array<{}>> = new EventEmitter<{} | Array<{}>>();
