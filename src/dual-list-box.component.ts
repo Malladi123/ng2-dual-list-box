@@ -40,13 +40,17 @@ export class DualListBoxComponent implements OnInit, ControlValueAccessor {
     // field to use for value of option
     @Input() valueField = 'id';
     // field to use for displaying option text
-    @Input() textField = 'Pharmacy';
+    @Input() textField = 'Name';
     // text to display as title above component
     @Input() title: string;
     // time to debounce search output in ms
     @Input() debounceTime = 500;
     // show/hide button to move all items between boxes
     @Input() moveAllButton = true;
+    // text displayed over the available items list box
+     @Input() availableText = 'Available items';
+     // text displayed over the selected items list box
+     @Input() selectedText = 'Selected items';
     // set placeholder text in available items list box
     @Input() availableFilterPlaceholder= 'Search Pharmacies';
     // set placeholder text in selected items list box
